@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        // an important comment
         val etWorldWeight : EditText? = findViewById(R.id.etWWeight) as? EditText
         val btnCalculate : Button? = findViewById(R.id.btnCalculate) as? Button
 
