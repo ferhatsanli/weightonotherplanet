@@ -2,7 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.WeightOnOtherPlanets" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/titlePrimary</item>
+        <item name="colorPrimaryDark">@color/titlePrimaryDark</item>
+        <item name="android:colorAccent">@color/titleAccentColor</item>
     </style>
 
     <style name="Theme.WeightOnOtherPlanets" parent="Base.Theme.WeightOnOtherPlanets" />

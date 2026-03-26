@@ -3,12 +3,15 @@ package com.ferhat.weightonotherplanets
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.snackbar.Snackbar
 import java.io.InvalidObjectException
 
@@ -32,10 +35,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // an important comment
+
+        // UI widgets
         val etWorldWeight : EditText? = findViewById(R.id.etWWeight) as? EditText
         val btnCalculate : Button? = findViewById(R.id.btnCalculate) as? Button
+        val imgBanner : ImageView = findViewById(R.id.imageWorldBanner) as ImageView
 
+        // Glide >> banner loading
+        Glide.with(this)
+            .load(R.drawable.world)
+            .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .into(imgBanner)
 
         if (etWorldWeight == null || btnCalculate == null)
             throw InvalidObjectException("EditText or Button objects are null")
